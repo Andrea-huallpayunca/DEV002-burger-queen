@@ -7,12 +7,28 @@ export function CardPedidoLarge({pedido,quitarPedido, MostrarModal}){
         const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
         let horita=hour+":"+minutes+":"+seconds
 
-        EnviandoHora(pedido.pedido,horita)
+        let start=pedido.time[0]
+        // let finish=horita
+    
+        let dividiendoStart=start.split(":")
+        let horaStart=Number(dividiendoStart[0])
+        let minutosStart=Number(dividiendoStart[1])
+        let segStart=Number(dividiendoStart[2])
+    
+        // let dividiendoFinish=finish.split(":")
+        // let horaFinish=Number(dividiendoFinish[0])
+        // let minutosFinish=Number(dividiendoFinish[1])
+        // let segFinish=Number(dividiendoFinish[2])
 
+        const tiempo= (hour-horaStart)+":"+(minutes-minutosStart)+":"+(seconds-segStart)
+
+        EnviandoHora(pedido.pedido,horita)
+        CambiarPropTimeEnCocina(pedido.pedido,tiempo)
         CambiarPropState(pedido.pedido,"Listo para servirse")
 
         quitarPedido(pedido.pedido)
-        MostrarModal(pedido)
+        MostrarModal(pedido, horita)
+        
         }
     
     return(

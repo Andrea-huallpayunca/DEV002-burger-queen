@@ -21,11 +21,12 @@ export function PedidosPorCocinar(){
         e.preventDefault()
         console.log(e)
         let number= e.target.children[1].innerText
-
+        // sentencia*
         const date = new Date();
         const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
 
         console.log(hour,minutes,seconds)
+        // expreion*
         let horita=hour+":"+minutes+":"+seconds
         console.log(horita)
         // console.log(Date())
