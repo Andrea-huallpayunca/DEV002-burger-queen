@@ -1,0 +1,92 @@
+.fondo{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+.headMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.color{
+    background-color: var(--naranja--) ;
+    /* color: white; */
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 20px 20px 0 0 ;
+    border-color: var(--naranja--);
+  
+}
+.sinColor{
+    background-color: var(--naranja-suave--);
+    height: 50px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.menu{
+width: 450px;
+}
+.form{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+
+}
+.pedido{
+    background-color: var(--verde--);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+
+}
+.lista{
+    background-color: var(--verde--);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    overflow: auto;
+    max-height: 280px;
+
+}
+.lista::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.lista::-webkit-scrollbar:vertical {
+    width:10px;
+}
+.lista::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.lista::-webkit-scrollbar-track {
+    border-radius: 30px;  
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.borrar, .enviar{
+    padding: 20px 30px;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.borrar{
+    background-color: #F86A6C;
+}
+.enviar{
+    background-color: #3DDB72 ;
+    width: 45%;
+}
